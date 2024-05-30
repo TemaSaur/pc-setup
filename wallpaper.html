@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background: #282A36;
+			color: #6271A3;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-family: "Jetbrains Mono";
+		}
+		span.time {
+			font-size: 100px;
+		}
+		span.date {
+			font-size: 24px
+		}
+	</style>
+</head>
+<body>
+	<span class="time"></span>
+	<span class="date"></span>
+	<script>
+		const timeEl = document.querySelector('.time')
+		const dateEl = document.querySelector('.date')
+		let now
+
+		const format = (num) => num < 10 ? '0'+num : ''+num
+
+		const getWeekDay = () => ['su', 'mo', 'tu', 'we', 'th', 'fr', 'sa'][new Date().getDay()]
+
+		const getTime = () => {
+			return format(now.getHours()) + ':' + format(now.getMinutes()) + ':' + format(now.getSeconds())
+		}
+
+		const getDate = () => {
+			return getWeekDay() + ', '
+				+ (new Date().getYear() - 100) + '-'
+				+ format(new Date().getMonth() + 1) + '-'
+				+ format(new Date().getDate())
+		}
+
+		const setDateTime = () => {
+			now = new Date()
+			timeEl.textContent = getTime()
+			dateEl.textContent = getDate()
+		}
+
+		setInterval(setDateTime, 200)
+	</script>
+</body>
+</html>

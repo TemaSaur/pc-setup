@@ -9,7 +9,7 @@ winget install -e --id File-New-Project.EarTrumpet
 winget install -e --id WinDirStat.WinDirStat
 winget install -e --id CrystalRich.LockHunter
 winget install -e --id StefanSundin.Superf4
-winget install -e --id Rainmeter.Rainmeter
+winget install -e --id rocksdanister.LivelyWallpaper
 winget install -e --id Nvidia.GeForceExperience
 winget install -e --id Unchecky.Unchecky
 winget install -e --id Microsoft.PowerToys
@@ -97,4 +97,4 @@ winget install -e --id LLVM.LLVM
 # packages
 pip install thefuck ptpython uvicorn gunicorn
 npm i -g pnpm five-serve
-choco install pypy3 -y
+choco install pypy3 -y ripgrep wget fd unzip gzip mingw make
