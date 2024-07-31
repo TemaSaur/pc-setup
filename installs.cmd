@@ -4,6 +4,10 @@ winget install -e --id Mozilla.Firefox.DeveloperEdition
 winget install -e --id Brave.Brave
 
 
+# audio driver
+start https://www.m-audio.com/support/drivers
+
+
 # utils
 winget install -e --id File-New-Project.EarTrumpet
 winget install -e --id WinDirStat.WinDirStat
