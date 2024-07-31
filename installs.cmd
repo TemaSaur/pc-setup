@@ -14,6 +14,7 @@ winget install -e --id Nvidia.GeForceExperience
 winget install -e --id Unchecky.Unchecky
 winget install -e --id Microsoft.PowerToys
 winget install -e --id JohnMacFarlane.Pandoc
+winget install -e --id Radmin.VPN
 
 
 # file formats
