@@ -22,7 +22,7 @@ winget install -e --id VideoLAN.VLC
 winget install -e --id nomacs.nomacs
 
 
-# other
+# terminal
 winget install -e --id Microsoft.WindowsTerminal
 winget install -e --id Starship.Starship
 winget install -e --id Chocolatey.Chocolatey
