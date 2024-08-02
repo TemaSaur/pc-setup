@@ -30,14 +30,16 @@ winget install -e --id nomacs.nomacs
 # terminal
 winget install -e --id Microsoft.WindowsTerminal
 winget install -e --id Starship.Starship
+echo "Set-ExecutionPolicy -Scope CurrentUser RemoteSigned" >> $PSHOME\Profile.ps1
+echo "Invoke-Expression (&starship init powershell)" >> $PSHOME\Profile.ps1
 winget install -e --id Chocolatey.Chocolatey
+choco upgrade chocolatey # Administrator
 
 
 # apps
 winget install -e --id OBSProject.OBSStudio
 winget install -e --id Figma.Figma
 winget install -e --id Figma.FigmaAgent
-winget install -e --id Inkscape.Inkscape
 winget install -e --id qBittorrent.qBittorrent
 winget install -e --id Notion.Notion
 winget install -e --id TheDocumentFoundation.LibreOffice
@@ -45,6 +47,7 @@ iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex
 
 
 # socials
+winget install -e --id Telegram.TelegramDesktop
 winget install -e --id Discord.Discord
 winget install -e --id Microsoft.Teams
 winget install -e --id Zoom.Zoom
@@ -73,6 +76,7 @@ winget install -e --id ElectronicArts.EADesktop
 winget install -e --id OpenJS.NodeJS.LTS
 
 winget install -e --id Python.Python.3.9
+winget install -e --id Python.Python.3.11
 winget install -e --id Python.Python.3.12
 
 winget install -e --id Oracle.JDK.17
@@ -101,5 +105,6 @@ winget install -e --id LLVM.LLVM
 
 # packages
 pip install thefuck ptpython uvicorn gunicorn
-npm i -g pnpm five-serve
+npm i -g pnpm five-server
+echo "Set-Alias -Name serve -Value five-server" >> $PSHOME\Profile.ps1
 choco install pypy3 -y ripgrep wget fd unzip gzip mingw make
